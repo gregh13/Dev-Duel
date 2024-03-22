@@ -1,0 +1,83 @@
+.profile-box {
+    box-sizing: border-box;
+    width: 650px;
+    height: 500px;
+    cursor: default;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    width: 30%;
+    height: 50%;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90%;
+    width:70%;
+}
+
+.property-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+}
+
+.property-box {
+    /* Rectangle 1 */
+
+    box-sizing: border-box;
+    width: 134px;
+    height: 30px;
+
+    background: #E1F1FF;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    padding: 5px 0px;
+
+    text-align: center;
+    /* font-size: 1em; */
+}
+
+.property-value {
+    margin-left: 2%;
+    padding: 4.5px 0 2.2px 1.5%; 
+    font-size: 1.2em;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.github-image {
+    border-radius: 50%;
+    border: 5px solid #555;
+    width: 100%
+}
+
+.different {
+    background-color: #e7e7e7;
+}
+
+.more {
+    background-color: #d0f5ce;
+}
+
+.less {
+    background-color: #edbaba;
+}

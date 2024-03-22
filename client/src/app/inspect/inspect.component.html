@@ -1,0 +1,13 @@
+<div class="container-main">
+  <app-text-input (usernameChange)="receiveUsername($event)"></app-text-input>
+  <button class="submit-button" (click)="onSubmit()">Inspect</button>
+  <div *ngIf="errorMessage">
+    <br>
+    <h2 class="error">{{errorMessage}}</h2>
+  </div>
+  <div class="container-main" *ngIf="userProfiles.length > 0">
+    <app-profile [profile]="userProfiles[0]"></app-profile>
+  </div>
+
+
+</div>

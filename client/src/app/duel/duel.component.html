@@ -1,0 +1,52 @@
+<div class="container-duel">
+  <div class="container-input">
+    <app-text-input
+      (usernameChange)="receiveUsernameOne($event)"
+    ></app-text-input>
+    <p class="vs">VS</p>
+    <app-text-input
+      (usernameChange)="receiveUsernameTwo($event)"
+    ></app-text-input>
+  </div>
+  <br />
+  <br />
+  <button class="submit-button" (click)="onSubmit()">Duel</button>
+  <div *ngIf="errorMessage">
+    <br>
+    <h2 class="error">{{errorMessage}}</h2>
+  </div>
+  <div class="container-profiles" *ngIf="userProfiles.length > 0">
+    <div>
+      <div class="winner-banner">
+        <div *ngIf="userProfiles[0].winner">
+          <h2> 
+            <span><img src="../../assets/images/winner-flag/green-flag-reversed-32.png"></span>
+            <span class="green"> Winner</span>
+            <span class="blue">!</span>
+            <span class="red">!</span>
+            <span class="orange">! </span>
+            <span><img src="../../assets/images/winner-flag/green-flag-32.png"></span>
+          </h2>  
+        </div>
+      </div>
+      <app-profile class="profile"[profile]="userProfiles[0]"></app-profile>
+    </div>
+    <div>
+      <div class="winner-banner">
+        <div *ngIf="userProfiles[1].winner">
+          <h2> 
+            <span><img src="../../assets/images/winner-flag/green-flag-reversed-32.png"></span>
+            <span class="green"> Winner</span>
+            <span class="blue">!</span>
+            <span class="red">!</span>
+            <span class="orange">! </span>
+            <span><img src="../../assets/images/winner-flag/green-flag-32.png"></span>
+          </h2>  
+        </div> 
+      </div>
+      <app-profile class="profile"[profile]="userProfiles[1]"></app-profile>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,27 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* color: blueviolet; */
+    border-bottom: 3px solid #858383;
+}
+
+.link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    color: #581DFF;
+    padding: 0 5vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {}
+
+a.active > h1.link {
+    color: orange;
+}

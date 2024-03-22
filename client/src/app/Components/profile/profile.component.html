@@ -1,0 +1,21 @@
+<div class="profile-box" *ngIf="profile">
+    <div class="container">
+        <div class="left-column">
+            <div *ngIf="profile.avatar_url else altImage">
+            <img class="github-image" src="{{profile.avatar_url}}" alt="avatar picture pulled from GitHub">
+        </div>
+        <ng-template #altImage>
+            <img class="github-image" src="../../../assets/images/generic-profile-image.png" alt="generic avatar picture placeholder">
+        </ng-template>
+            <p>{{profile.bio}}</p>
+        </div>
+        <div class="right-column">
+                <div *ngFor="let prop of profile.props| keyvalue : returnZero">
+                    <div class="property-row">
+                        <span class="property-box">{{prop.key}}</span><span class="property-value {{profile.prop_styling[prop.key]}}">{{prop.value}}</span>
+                        <br>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
